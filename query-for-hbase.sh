@@ -16,4 +16,4 @@ NGINX_LOG_PATH='nginxPath'
 cat $NGINX_LOG_PATH | awk -F "\t" '{print $4"\tcode="$18}' | grep "code=500" | awk -F ":" '{print $1":"$2":"$3}' | uniq -c
 
 #find 500 url
-cat $NGINX_LOG_PATH | awk -F "\t" '{print $4"\t"$1"\t"$5"\tcode="$18}' | grep "code=500"
+cat $NGINX_LOG_PATH | awk -F "\t" '{print $4"\t"$10"\t"$5"\tcode="$18}' | grep "code=500"
