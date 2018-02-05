@@ -17,3 +17,9 @@ sed '10!d' fileName
 
 #sum of lines
 awk '{s+=$1} END {print s}' fileName
+
+
+#check process uptime
+ps -p 37014 -o stime,etime
+#STIME     ELAPSED
+#16:29       30:31
