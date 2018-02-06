@@ -23,3 +23,5 @@ awk '{s+=$1} END {print s}' fileName
 ps -p 37014 -o stime,etime
 #STIME     ELAPSED
 #16:29       30:31
+
+ps -eo pid,lstart,cmd
